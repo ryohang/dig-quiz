@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="game_subject_array">
+        <item>@string/audio_label</item>
+        <item>@string/images_label</item>
+        <item>@string/html_label</item>
+    </string-array>
+</resources>
