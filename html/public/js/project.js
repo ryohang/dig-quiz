@@ -46,6 +46,7 @@ angular.module('project',[]).
           }],
 
           "label": "What is an additive color model and stands for Red, Green, and Blue?",
+          "video": "http://videos.tout.com/watermark/mp4/7e276ebe8c0f302bd757a5c60501d907.mp4",
           "answer": "RGB", 
           "noise": ["CMYK", "ASCII", "DHTML"]
       },
@@ -150,6 +151,7 @@ angular.module('project',[]).
       },
       {
           "label": "The term pixel stands for picture _________.",
+          "video": "http://videos.tout.com/watermark/mp4/23e9fec0d6a38667f04e253c1c9c86d0.mp4",
           "answer": "element",
           "noise": ["extension", "expression", "envelope"]
       },
@@ -196,6 +198,7 @@ angular.module('project',[]).
               "title": "Senators: Tenn. officials more decisive than FDA"
           },
           "label": "A sound with higher _____ is perceived to have a higher pitch.",
+          "video": "http://videos.tout.com/watermark/mp4/fda447a9250283d234a3d6fb112a28cd.mp4",
           "answer": "frequency",
           "noise": ["tracks", "bit depth", "fidelity"]
       },
@@ -216,6 +219,7 @@ angular.module('project',[]).
       },
         {
           "label": "Sound intensity is often measured in ________________.",
+          "video": "http://videos.tout.com/watermark/mp4/7157ad1f75366bb7d2d1b4860f08107e.mp4",
           "answer": "decibels",
           "noise": ["decimals", "dynamic beats", "digital bells"]
       },
@@ -232,6 +236,7 @@ angular.module('project',[]).
       },
         {
           "label": "What is the most common sampling rate for CD quality audio?",
+          "video": "http://videos.tout.com/watermark/mp4/82177b1b7e8b6177ce3e8e98905fc440.mp4",
           "answer": "44,100 Hz",
           "noise": ["11,025 Hz", "96,000 Hz", "22,050 Hz"]
       },
@@ -271,12 +276,14 @@ angular.module('project',[]).
               "title": "Lottery winner who kept taking food stamps found dead"
           }],
 
-          "label": "HTML stands for:  ", 
+          "label": "HTML stands for:  ",
+          "video": "http://videos.tout.com/watermark/mp4/4e8aa621a6ef4a328028c563cd7fd26d.mp4",
           "answer": "HyperText Markup Language",
           "noise": ["HyperText Music Layer", "HyperText Machine Language", "HyperText Mutator Laser"]
       },
       { 
-          "label": "URL stands for:  ", 
+          "label": "URL stands for:  ",
+          "video": "http://videos.tout.com/watermark/mp4/dbb517b98a3c20474e4cc72a25b05670.mp4",
           "answer": "Uniform Resource Locator",
           "noise": ["Uniform Relay Link", "Uniform Resolution Layer", "Uniform Raster Listener"] 
       },
@@ -297,6 +304,7 @@ angular.module('project',[]).
       },
       { 
           "label": "CSS stands for:  ", 
+          "video": "http://videos.tout.com/watermark/mp4/1899885f28b0478426eaf9e863a48125.mp4",
           "answer":"Cascading Style Sheets",
           "noise": ["Cell Style Sheets", "Common Style Sheets", "Computer Style Sheets"]
       },
@@ -312,6 +320,7 @@ angular.module('project',[]).
       },
       { 
           "label": "The ______ folder is the outermost folder of a website's structure.", 
+          "video": "http://videos.tout.com/watermark/mp4/cd5231066d28f457b78d0814b5bb99fb.mp4",
           "answer": "root",
           "noise": ["boot", "moot", "loot"]
       },
@@ -327,7 +336,7 @@ angular.module('project',[]).
 function ListCtrl($scope , quizData) {
   $scope.quizes = quizData;
 }
-function TakeQuiz( $scope , quizData, $routeParams , $location){
+function TakeQuiz( $scope , quizData, $routeParams , $location, $http){
   console.log( $routeParams );
   $scope.qId = $routeParams.quizId;
   $scope.quizes = quizData;
@@ -358,8 +367,8 @@ function TakeQuiz( $scope , quizData, $routeParams , $location){
     if( $scope.currentQuestionIndex > $scope.quiz.questions.length -1 ){
       $scope.showLastScreen = true;
       //send email
-      /*$http({method: 'GET', url: '/sendEmail'}).
-        success(function(data, status, headers, config) {s
+      $http({method: 'GET', url: '/sendemail'}).
+        success(function(data, status, headers, config) {
         // this callback will be called asynchronously
         // when the response is available
           console.log( data );
@@ -369,7 +378,7 @@ function TakeQuiz( $scope , quizData, $routeParams , $location){
           // or server returns response with status
           // code outside of the <200, 400) range
           console.log( data );
-        });*/
+        });/**/
       console.log("send email");
       $location.path( "/" );
       return;
