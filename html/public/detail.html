@@ -1,2 +1,11 @@
-<h2>{{quizId}}</h2>
-<div class="questionLabel">{{quiz.label}}</div>
+<h2>"{{quizId}}</h2>
+<div class="quizContainer">
+    <div class="quizLabel">{{quiz.label}}</div>
+    <div class="question">
+        <div class="questionLabel">{{currentQuestion.label}}</div>
+        <div class="options">
+            <div class="option" ng-repeat='option in currentQuestion.options'><input type="radio" value="{{option.label}}"> {{option.label}}</div>
+        </div>
+        <a class="button" class='btn' href="" ng-click="nextQuestion()">Next</a>
+    </div>
+</div>
