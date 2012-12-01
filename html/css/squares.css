@@ -1,3 +1,7 @@
+
+.QuizList { display: block; list-style: none; }
+.QuizList li { display: block; text-align: center; width: 50px; height: 100px; }
+
 .background {
   position: absolute;
   width: 100%;

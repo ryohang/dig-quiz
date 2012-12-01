@@ -1,0 +1,30 @@
+
+h1 { margin-bottom: 10px; text-align:center;}
+img { display: block; margin-bottom: 5px; }
+.apis { width: 460px; display: inline-block; overflow: hidden; vertical-align: top; height: 500px;}
+.QuizList { margin-top: 10px; display: inline-block; margin: 0; padding: 5px; list-style: none; width: 280px;}
+.QuizList li { display: block; padding: 5px 10px;}
+.QuizList li a { font-size: 2em; display: table-cell; color: white; text-align: center; vertical-align: middle; height: 125px; width: 270px; }
+
+.QuizList li:nth-child(3n) a { background-color: red;border: solid 1px darkred;  }
+.QuizList li:nth-child(3n+1) a { background-color: blue; border: solid 1px navy; ;  }
+.QuizList li:nth-child(3n+2) a { background-color: green; border: solid 1px darkgreen;   }
+
+a {color: inherit; text-decoration: inherit;}
+iframe { display: inline-block;  }
+h5 { margin-top: 5px; }
+.taglines { margin: 15px 0 0 0 }
+.options, .button {  
+  margin-left: 10%;
+  width: 80%;
+}
+.button { border: solid 1px #999; background-color: #ccc; color: #000; border-radius: 10px; padding: 0 10px; }
+.question { display: inline-block; width: 280px; position: relative; vertical-align: top}
+.quizLabel { text-transform: uppercase;}
+.stories { display:block; list-style: none; }
+.tags { display: inline; list-style: none;}
+.tags li { border: 1px solid darkblue; background-color: lightblue; color: white; display: inline; margin: 0 5px 0 0; padding: 2px; }
+.stories li { display: block; margin-right: 5px; padding: 2px; }
+.stories li a { display: block;}
+.stories li a:before { content: attr(data-pubdate); font-style: italic; display: block; }
+.stories li a:after { content: attr(data-desc); font-size: .8em; font-weight: bold; display: block;}
