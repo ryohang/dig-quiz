@@ -178,7 +178,7 @@ angular.module('project',[]).
 function ListCtrl($scope , quizData) {
   $scope.quizes = quizData;
 }
-function TakeQuiz( $scope , quizData, $routeParams){
+function TakeQuiz( $scope , quizData, $routeParams , $location){
   console.log( $routeParams );
   $scope.qId = $routeParams.quizId;
   $scope.quizes = quizData;
@@ -187,6 +187,7 @@ function TakeQuiz( $scope , quizData, $routeParams){
     if( quiz.label === $scope.qId )
       return quiz;
   });
+  $scope.nextButtonLabel = "Next";
   $scope.currentQuestionIndex = -1;
   $scope.questionChoices = [];
   var getQuestion = function(){
@@ -195,8 +196,35 @@ function TakeQuiz( $scope , quizData, $routeParams){
   }
   $scope.currentQuestion = getQuestion();
   console.log( $scope.currentQuestion );
+  $scope.showLastScreen = false;
   $scope.nextQuestion = function(){
+    console.log( $scope.currentQuestionIndex +"   "+ $scope.quiz.questions.length );
     $scope.currentQuestionIndex ++ ;
+    if( $scope.currentQuestionIndex == $scope.quiz.questions.length - 1){
+      console.log("last screen");
+      $scope.showLastScreen = true;
+      $scope.nextButtonLabel = "Submit";
+      return;
+    }
+    if( $scope.currentQuestionIndex > $scope.quiz.questions.length -1 ){
+      $scope.showLastScreen = true;
+      //send email
+      /*$http({method: 'GET', url: '/sendEmail'}).
+        success(function(data, status, headers, config) {s
+        // this callback will be called asynchronously
+        // when the response is available
+          console.log( data );
+        }).
+        error(function(data, status, headers, config) {
+          // called asynchronously if an error occurs
+          // or server returns response with status
+          // code outside of the <200, 400) range
+          console.log( data );
+        });*/
+      console.log("send email");
+      $location.path( "/" );
+      return;
+    }
     $scope.currentQuestion = getQuestion();
     console.log("noise");
     console.log( $scope.currentQuestion.noise );
@@ -206,7 +234,8 @@ function TakeQuiz( $scope , quizData, $routeParams){
     console.log( $scope.questionChoices );
 
   };
-  $scope.nextQuestion();
+
+  //$scope.nextQuestion();
 
 
 }

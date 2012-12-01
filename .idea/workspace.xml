@@ -4,7 +4,6 @@
     <list default="true" id="56516d90-70c7-482c-9604-2e00cf2f7119" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/public/detail.html" afterPath="$PROJECT_DIR$/html/public/detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/public/js/project.js" afterPath="$PROJECT_DIR$/html/public/js/project.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/public/list.html" afterPath="$PROJECT_DIR$/html/public/list.html" />
     </list>
     <ignored path="dig-quiz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +35,7 @@
       <file leaf-file-name="project.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/public/js/project.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="0" selection-start="8382" selection-end="8382" vertical-scroll-proportion="0.8069382">
+            <state line="180" column="62" selection-start="7423" selection-end="7423" vertical-scroll-proportion="0.10708899">
               <folding />
             </state>
           </provider>
@@ -54,7 +53,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="27" selection-start="1061" selection-end="1078" vertical-scroll-proportion="-11.08">
+            <state line="30" column="27" selection-start="1061" selection-end="1078" vertical-scroll-proportion="-19.2">
               <folding />
             </state>
           </provider>
@@ -63,7 +62,7 @@
       <file leaf-file-name="detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/public/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="103" selection-start="320" selection-end="320" vertical-scroll-proportion="-3.84">
+            <state line="9" column="55" selection-start="649" selection-end="649" vertical-scroll-proportion="-5.76">
               <folding />
             </state>
           </provider>
@@ -310,16 +309,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/public/index.html">
+    <entry file="file://$PROJECT_DIR$/html/public/js/quizzes.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="27" selection-start="1061" selection-end="1078" vertical-scroll-proportion="-11.08">
+        <state line="0" column="0" selection-start="0" selection-end="7540" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/public/js/quizzes.json">
+    <entry file="file://$PROJECT_DIR$/html/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="7540" vertical-scroll-proportion="-0.0">
+        <state line="30" column="27" selection-start="1061" selection-end="1078" vertical-scroll-proportion="-19.2">
           <folding />
         </state>
       </provider>
@@ -333,14 +332,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/public/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="103" selection-start="320" selection-end="320" vertical-scroll-proportion="-3.84">
+        <state line="9" column="55" selection-start="649" selection-end="649" vertical-scroll-proportion="-5.76">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/public/js/project.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="0" selection-start="8382" selection-end="8382" vertical-scroll-proportion="0.8069382">
+        <state line="180" column="62" selection-start="7423" selection-end="7423" vertical-scroll-proportion="0.10708899">
           <folding />
         </state>
       </provider>
