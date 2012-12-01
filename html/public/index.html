@@ -8,18 +8,48 @@
     <script src="js/underscore.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui-1.9.2.custom.js"></script>
+	<script type="text/javascript" charset="utf-8"src="cordova-2.2.0.js"></script>
     <script type="text/javascript" charset="utf-8"src="childbrowser.js"></script>
 	<script src="js/angular.js"></script>
     <script src="js/angular-resource.js"></script>
     <script src="js/angular-ui.js"></script>
     <script src="js/project.js"></script>
+
+	<script type="text/javascript">
+ 
+	function onBodyLoad()
+	{
+	document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	function onDeviceReady(){
+		// do your thing!
+		// childbrowser = ChildBrowser.install();
+		// navigator.notification.alert("Cordova is working")
+	}
+
+ function onLinkClick() {   
+	    // if(childbrowser != null)
+	    // {
+	        // window.plugins.childBrowser.onLocationChange = function(loc){ alert("In index.html new loc = " + loc); };
+	        // window.plugins.childBrowser.onClose = function(){alert("In index.html child browser closed");};
+	        // window.plugins.childBrowser.onOpenExternal = function(){alert("In index.html onOpenExternal");};
+			 window.plugins.childBrowser.showWebPage("http://google.com", {
+                    showLocationBar: true
+                });
+	    // }  
+	}
+	
+	</script>
 	
 </head>
-<body>
+<body onload="onBodyLoad()">
 <h1>Digi Quiz</h1>
 <div class="container">
     <div ng-view></div>
 </div>
+
+<a onclick="onLinkClick()">testChildBrowser</a>
 
 
 </body>
