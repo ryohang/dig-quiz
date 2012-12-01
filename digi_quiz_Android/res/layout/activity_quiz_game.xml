@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quiz_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp" >
+    
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+    
+    <RadioGroup
+        android:id="@+id/answer_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <RadioButton
+            android:id="@+id/answer_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+       	<RadioButton
+       	    android:id="@+id/answer_option2"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content" />
+       	<RadioButton
+       	    android:id="@+id/answer_option3"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content" />
+       	<RadioButton
+       	    android:id="@+id/answer_option4"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content" />
+         
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:text="@string/submit_answer_label" />
+    
+        <Button
+        android:id="@+id/exit_button"
+        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/exit_label"
+        android:freezesText="true" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="about_quiz_game">BETA VERSION:  This Quiz was created as a basic review for common digital media terms and concepts.  Future updates will keep score and have more questions.  Please post constructive comments.  Thanks!</string>
+    <string name="about_label">About</string>
+    <string name="app_name">Computers and Creativity Quiz </string>
+    <string name="audio_label">Audio</string>
+    <string name="correct_msg_label">  CORRECT!  </string>
+    <string name="exit_label">EXIT</string>
+    <string name="html_label">HTML</string>
+    <string name="images_label">Images</string>
+    <string name="incorrect_msg_label">  WRONG!  </string>
+    <string name="menu_settings">Settings</string>
+    <string name="new_label">New Game</string>
+    <string name="ok_label"> OK </string>
+    <string name="question_label">Question</string>
+    <string name="subject_label">Choose Subject</string>
+    <string name="submit_answer_label">SUBMIT</string>
+    <string name="thanks">  Thanks for playing!  </string>
+    <string name="title_activity_enter_game">Quiz# 1 Digital Media</string>
+    <string name="title_activity_game_options">Computers and Creativity Review Options</string>
+
+</resources>
