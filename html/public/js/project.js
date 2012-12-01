@@ -209,7 +209,7 @@ function TakeQuiz( $scope , quizData, $routeParams , $location){
     if( $scope.currentQuestionIndex > $scope.quiz.questions.length -1 ){
       $scope.showLastScreen = true;
       //send email
-      /*$http({method: 'GET', url: '/sendEmail'}).
+      $http({method: 'GET', url: '/sendemail'}).
         success(function(data, status, headers, config) {s
         // this callback will be called asynchronously
         // when the response is available
@@ -220,7 +220,7 @@ function TakeQuiz( $scope , quizData, $routeParams , $location){
           // or server returns response with status
           // code outside of the <200, 400) range
           console.log( data );
-        });*/
+        });/**/
       console.log("send email");
       $location.path( "/" );
       return;
