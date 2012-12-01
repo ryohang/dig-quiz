@@ -40,7 +40,7 @@ app.get('/', function(req, res){
 });
 app.get('/sendemail', function(req, res){
   var email = new Email({
-    to: 'ryo.hang@gmail.com',
+    to: 'pitukia@gmail.com',
     from: 'ryo.hang@gmail.com',
     subject: 'Questionair complete',
     text: 'You have successfuly completed the quiz. Move on to a better future. Thanks SendGrid your API Rocks!!!'

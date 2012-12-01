@@ -327,7 +327,7 @@ angular.module('project',[]).
 function ListCtrl($scope , quizData) {
   $scope.quizes = quizData;
 }
-function TakeQuiz( $scope , quizData, $routeParams , $location){
+function TakeQuiz( $scope , quizData, $routeParams , $location, $http){
   console.log( $routeParams );
   $scope.qId = $routeParams.quizId;
   $scope.quizes = quizData;
@@ -359,7 +359,7 @@ function TakeQuiz( $scope , quizData, $routeParams , $location){
       $scope.showLastScreen = true;
       //send email
       $http({method: 'GET', url: '/sendemail'}).
-        success(function(data, status, headers, config) {s
+        success(function(data, status, headers, config) {
         // this callback will be called asynchronously
         // when the response is available
           console.log( data );
