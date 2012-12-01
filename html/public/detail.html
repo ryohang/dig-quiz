@@ -11,7 +11,7 @@
             <li ng-repeat='tag in currentQuestion.tags'>{{tag}}</li>
         </ul>
         <ul class="stories" ng-hide="showLastScreen">
-            <li ng-repeat='story in currentQuestion.stories'><a href="{{story.link}}" title="{{story.description}}">{{story.title}}</a></li>
+            <li ng-repeat='story in currentQuestion.stories'><a href="{{story.link}}" data-pubdate="{{story.pubDate}}" title="{{story.description}}">{{story.title}}</a></li>
         </ul>
         <div class="submitQuiz" ng-show="showLastScreen">Thank you</div>
         <a class="button" class='btn' href="" ng-click="nextQuestion()">{{nextButtonLabel}}</a>
