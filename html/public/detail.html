@@ -1,8 +1,8 @@
 <h2>"{{quizId}}</h2>
 <div class="quizContainer">
-    <div class="quizLabel">{{quiz.label}}</div>
+    <H3 class="quizLabel">{{quiz.label}}</H3>
     <div class="question">
-        <div class="questionLabel">{{currentQuestion.label}}</div>
+        <h4 class="questionLabel">{{currentQuestion.label}}</h4>
         <div class="options">
             <div class="option" ng-repeat='option in currentQuestion.options'><input type="radio" value="{{option.label}}"> {{option.label}}</div>
         </div>
