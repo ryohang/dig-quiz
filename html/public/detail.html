@@ -4,7 +4,7 @@
     <div class="question">
         <h4 class="questionLabel">{{currentQuestion.label}}</h4>
         <div class="options">
-            <div class="option" ng-repeat='option in currentQuestion.options'><input type="radio" value="{{option.label}}"> {{option.label}}</div>
+            <div class="option" ng-repeat='option in questionChoices'><input type="radio" name="choices" value="{{option}}"> {{option}}</div>
         </div>
         <a class="button" class='btn' href="" ng-click="nextQuestion()">Next</a>
     </div>
