@@ -1,0 +1,42 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'brew' ]
+2 info using npm@1.1.65
+3 info using node@v0.8.14
+4 verbose read json /Users/deloriea/Sites/dig-quiz/package.json
+5 verbose read json /Users/deloriea/Sites/dig-quiz/package.json
+6 verbose cache add [ 'brew', null ]
+7 silly cache add name=undefined spec="brew" args=["brew",null]
+8 verbose parsed url { pathname: 'brew', path: 'brew', href: 'brew' }
+9 silly lockFile b6fc12d7-brew brew
+10 verbose lock brew /Users/deloriea/.npm/b6fc12d7-brew.lock
+11 silly lockFile b6fc12d7-brew brew
+12 verbose addNamed [ 'brew', '' ]
+13 verbose addNamed [ null, '' ]
+14 silly lockFile 6594b5e7-brew brew@
+15 verbose lock brew@ /Users/deloriea/.npm/6594b5e7-brew.lock
+16 silly addNameRange { name: 'brew', range: '', hasData: false }
+17 verbose url raw brew
+18 verbose url resolving [ 'https://registry.npmjs.org/', './brew' ]
+19 verbose url resolved https://registry.npmjs.org/brew
+20 info trying registry request attempt 1 at 11:23:37
+21 http GET https://registry.npmjs.org/brew
+22 http 404 https://registry.npmjs.org/brew
+23 silly registry.get cb [ 404,
+23 silly registry.get   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+23 silly registry.get     date: 'Sat, 01 Dec 2012 16:22:55 GMT',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'content-length': '52',
+23 silly registry.get     'cache-control': 'must-revalidate' } ]
+24 silly lockFile 6594b5e7-brew brew@
+25 error 404 'brew' is not in the npm registry.
+25 error 404 You should bug the author to publish it
+25 error 404
+25 error 404 Note that you can also install from a
+25 error 404 tarball, folder, or http url, or git url.
+26 error System Darwin 12.2.0
+27 error command "node" "/usr/local/bin/npm" "install" "brew"
+28 error cwd /Users/deloriea/Sites/dig-quiz
+29 error node -v v0.8.14
+30 error npm -v 1.1.65
+31 error code E404
+32 verbose exit [ 1, true ]

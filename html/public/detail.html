@@ -1,2 +1,13 @@
 <h2>{{quizId}}</h2>
-<div class="questionLabel">{{quiz.label}}</div>
+<div class="quizContainer">
+    <H3 class="quizLabel">{{quiz.label}}</H3>
+    <div class="question">
+        <h4 class="questionLabel">{{currentQuestion.label}}</h4>
+        <div class="landing" ng-show='currentQuestionIndex' >Select one of the answers and press next to continue. On the right side of your quiz you will find USA TODAY related ariticles. </div>
+        <div class="options" ng-hide="showLastScreen">
+            <div class="option" ng-repeat='option in questionChoices'><input type="radio" name="choices" value="{{option}}"> {{option}}</div>
+        </div>
+        <div class="submitQuiz" ng-show="showLastScreen">Thank you</div>
+        <a class="button" class='btn' href="" ng-click="nextQuestion()">{{nextButtonLabel}}</a>
+    </div>
+</div>

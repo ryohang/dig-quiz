@@ -1,0 +1,42 @@
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #250931;
+}
+
+.page {
+  position: relative;
+  top: 10px;
+  margin: auto;
+  width: 648px;
+  height: 100%;
+  font-size: 0;
+}
+
+.tile {
+  display:inline-block;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  margin: 4px;
+  cursor: pointer;
+
+  transition-function: scale;
+  transition-duration: .05s;
+  transition-timing-function: ease-in-out;
+  
+  &.wide { width: 208px; }
+  
+  &.gray { background: #D7D9CE; }
+  &.red { background: #C95431; }
+  &.blue { background: #4DB7B7; }
+  &.royalblue { background: #5150AE; }
+  &.oceanblue { background: #064B90; }
+  &.orange { background: #DE9218; }
+  &.green { background: #9BB435; }
+  &.purple { background: #761969; }
+  
+  &:hover { transform: scale(.96, .96); }
+  &:active { transform: scale(.94, .94); }
+}
