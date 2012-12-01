@@ -7,6 +7,12 @@
         <div class="options" ng-hide="showLastScreen">
             <div class="option" ng-repeat='option in questionChoices'><input type="radio" name="choices" value="{{option}}"> {{option}}</div>
         </div>
+        <ul class="tags" ng-hide="showLastScreen">
+            <li ng-repeat='tag in currentQuestion.tags'>{{tag}}</li>
+        </ul>
+        <ul class="stories" ng-hide="showLastScreen">
+            <li ng-repeat='story in currentQuestion.stories'><a href="{{story.link}}" title="{{story.description}}">{{story.title}}</a></li>
+        </ul>
         <div class="submitQuiz" ng-show="showLastScreen">Thank you</div>
         <a class="button" class='btn' href="" ng-click="nextQuestion()">{{nextButtonLabel}}</a>
     </div>
