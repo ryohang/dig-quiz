@@ -5,6 +5,6 @@
   , "dependencies": {
       "express": "2.4.3"
     , "jade": ">= 0.0.1"
-	, "sendgrid": "0.2.5"
+	  , "sendgrid": "0.2.5"
   }
 }
