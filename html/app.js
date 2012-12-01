@@ -41,9 +41,9 @@ app.get('/', function(req, res){
 app.get('/sendemail', function(req, res){
   var email = new Email({
     to: 'pitukia@gmail.com',
-    from: 'ryo.hang@gmail.com',
+    from: 'pitukia@gmail.com',//ryo.hang
     subject: 'Questionair complete',
-    text: 'You have successfuly completed the quiz. Move on to a better future. Thanks SendGrid your API Rocks!!!'
+    text: 'You have successfuly completed the quiz with a score of 80%. Move on to a better future. Thanks SendGrid your API Rocks!!!'
   });
 
 //   email.addFilterSetting('footer', 'enable', 1);
