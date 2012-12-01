@@ -1,19 +1,73 @@
+<style>
+	a {color: inherit; text-decoration: inherit;}
+	iframe { display: inline-block;  }
+	h5 { margin-top: 5px; }
+	.taglines { margin: 15px 0 0 0 }
+	.button { border: solid 1px #999; background-color: #ccc; border-radius: 10px; padding: 0 10px; }
+	.question { display: inline-block; width: 280px; position: relative; vertical-align: top}
+	.quizLabel { text-transform: uppercase;}
+	.stories { display:block; list-style: none; }
+	.tags { display: inline; list-style: none;}
+	.tags li { border: 1px solid darkblue; background-color: lightblue; color: white; display: inline; margin: 0 5px 0 0; padding: 2px; }
+	.stories li { display: block; margin-right: 5px; padding: 2px; }
+	.stories li a { display: block;}
+	.stories li a:before { content: attr(data-pubdate); font-style: italic; display: block; }
+	.stories li a:after { content: attr(data-desc); font-size: .8em; font-weight: bold; display: block;}
+</style>
 <h2>{{quizId}}</h2>
 <div class="quizContainer">
-    <H3 class="quizLabel">{{quiz.label}}</H3>
+    <H3 class="quizLabel">{{quiz.label}} QUIZ</H3>
+	<iframe ng-show="currentQuestion.video" class="iframe" src="{{currentQuestion.video}}" width="280" height="500" frameborder="0"></iframe>
+
     <div class="question">
         <h4 class="questionLabel">{{currentQuestion.label}}</h4>
         <div class="landing" ng-show='currentQuestionIndex' >Select one of the answers and press next to continue. On the right side of your quiz you will find USA TODAY related ariticles. </div>
         <div class="options" ng-hide="showLastScreen">
             <div class="option" ng-repeat='option in questionChoices'><input type="radio" name="choices" value="{{option}}"> {{option}}</div>
         </div>
-        <ul class="tags" ng-hide="showLastScreen">
-            <li ng-repeat='tag in currentQuestion.tags'>{{tag}}</li>
-        </ul>
-        <ul class="stories" ng-hide="showLastScreen">
-            <li ng-repeat='story in currentQuestion.stories'><a href="{{story.link}}" title="{{story.description}}">{{story.title}}</a></li>
-        </ul>
+
         <div class="submitQuiz" ng-show="showLastScreen">Thank you</div>
         <a class="button" class='btn' href="" ng-click="nextQuestion()">{{nextButtonLabel}}</a>
+
+        <div class="taglines" ng-show="currentQuestion.tags">
+	        <span>Tags:</span>
+	        <ul class="tags" ng-hide="showLastScreen">
+	            <li ng-repeat='tag in currentQuestion.tags'>{{tag}}</li>
+	        </ul>
+        </div>
+
+        <div ng-show="currentQuestion.stories">
+	        <h5>USAT TODAY Top Stories</h5>
+	        <ul class="stories">
+	            <li ng-repeat='story in currentQuestion.stories'><a href="{{story.link}}" data-pubdate="{{story.pubDate}}" data-desc="{{story.description}}">
+	            	{{story.title}}</a></li>
+	        </ul>
+	    </div>
     </div>
+	<script> 
+		var myVideo=document.getElementById("video1"); 
+
+		function playPause()
+		{ 
+		if (myVideo.paused) 
+		  myVideo.play(); 
+		else 
+		  myVideo.pause(); 
+		} 
+
+		function makeBig()
+		{ 
+			myVideo.width=560; 
+		} 
+
+		function makeSmall()
+		{ 
+		myVideo.width=320; 
+		} 
+
+		function makeNormal()
+		{ 
+			myVideo.width=420; 
+		} 
+	</script> 
 </div>
